@@ -1,0 +1,16 @@
+ SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\manul\source\repos\PharmacyManagement\pmedicineDB.mdf;Integrated Security=True;Connect Timeout=30");
+
+ SqlDataAdapter da = new SqlDataAdapter(query,con);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+
+
+ SqlCommand cmd = new SqlCommand();
+            cmd.Connection = con;
+            cmd.CommandText = query;
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+
+
+Cells["Id"].FormattedValue
